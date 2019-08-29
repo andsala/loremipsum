@@ -5,19 +5,11 @@
 </script>
 
 <style>
-		@import "~tachyons/css/tachyons.css";
-	/*main {*/
-	/*	position: relative;*/
-	/*	max-width: 56em;*/
-	/*	background-color: white;*/
-	/*	padding: 2em;*/
-	/*	margin: 0 auto;*/
-	/*	box-sizing: border-box;*/
-	/*}*/
+  @import "~tachyons/css/tachyons.css";
 </style>
 
-<Nav {segment}/>
+<!--<Nav {segment}/>-->
 
-<main>
+<main class="center mw7-l mw-100 pa2">
 	<slot></slot>
 </main>
