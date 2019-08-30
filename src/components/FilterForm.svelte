@@ -4,8 +4,8 @@
 	// TODO max number in base al tipo
 </script>
 
-<form class="flex">
-  <div class="w-third">
+<form class="flex items-start">
+  <div class="w-50">
     <ul class="list pl0">
       <li>
         <label>
@@ -40,17 +40,19 @@
     </ul>
   </div>
 
-  <div class="w-third">
-    <label>
-      Number:
-      <input type="number" min="1" bind:value={$size} class="input-reset ba br2 pa1">
-    </label>
+  <div class="w-50">
+    <div>
+      <label>
+        Number:
+        <input type="number" min="1" bind:value={$size} class="input-reset ba br2 pa1">
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type=checkbox bind:checked={$startWithLorem}>
+        Start with "Lorem ipsum&hellip;"
+      </label>
+    </div>
   </div>
 
-  <div class="w-third">
-    <label>
-      <input type=checkbox bind:checked={$startWithLorem}>
-      Start with "Lorem ipsum&hellip;"
-    </label>
-  </div>
 </form>

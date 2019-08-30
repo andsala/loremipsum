@@ -11,7 +11,7 @@
   <title>Lorem Ipsum</title>
 </svelte:head>
 
-<h1 class="f-headline">Lorem Ipsum</h1>
+<h1 class="f-headline lh-solid">Lorem Ipsum</h1>
 
 <details>
   <summary>Options</summary>
