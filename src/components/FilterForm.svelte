@@ -5,7 +5,7 @@
 </script>
 
 <form class="flex items-start">
-  <div class="w-50">
+  <div class="flex-auto">
     <ul class="list pl0">
       <li>
         <label>
@@ -40,7 +40,7 @@
     </ul>
   </div>
 
-  <div class="w-50">
+  <div class="flex-auto">
     <div>
       <label>
         Number:

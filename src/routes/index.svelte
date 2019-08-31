@@ -14,7 +14,7 @@
 <h1 class="f-headline lh-solid">Lorem Ipsum</h1>
 
 <details>
-  <summary>Options</summary>
+  <summary class="outline-0">Options</summary>
   <FilterForm/>
 </details>
 
