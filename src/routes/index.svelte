@@ -4,10 +4,6 @@
   import { mediaBreakpointIndex } from '../stores/style.store'
 </script>
 
-<style>
-
-</style>
-
 <svelte:head>
   <title>Lorem Ipsum</title>
 </svelte:head>

@@ -1,4 +1,4 @@
-import { readable } from 'svelte/store';
+import { readable, derived } from 'svelte/store';
 
 const mediaBreakpoints = ['xs', 'sm', 'md', 'lg', 'xl'];
 
@@ -16,23 +16,14 @@ export const mediaBreakpoint = readable(null, function start(set) {
     if (value !== lastValue) {
       set(value);
     }
-  }, 50);
+  }, 500);
 
   return function stop() {
     clearInterval(pollInterval)
   }
 });
 
-export const mediaBreakpointIndex = readable(null, function start(set) {
-  const unsubscribeMediaBreakpoint = mediaBreakpoint.subscribe(value => {
-    if (!value) {
-      set(null);
-    }
-    const index = mediaBreakpoints.indexOf(value || '');
-    set(index > 0 ? index : null);
-  });
-
-  return function stop() {
-    unsubscribeMediaBreakpoint();
-  }
+export const mediaBreakpointIndex = derived(mediaBreakpoint, ($mediaBreakpoint) => {
+  const index = mediaBreakpoints.indexOf($mediaBreakpoint || '');
+  return index > 0 ? index : null;
 });
