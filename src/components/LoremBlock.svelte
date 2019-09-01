@@ -1,5 +1,5 @@
 <script>
-  import { loremContent, type } from './lorem.store'
+  import { loremContent, type } from '../stores/lorem.store'
 </script>
 
 {#if $loremContent}

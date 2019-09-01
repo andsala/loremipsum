@@ -1,0 +1,47 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/reboot";
+
+@import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/type";
+
+@import "~bootstrap/scss/utilities/display";
+@import "~bootstrap/scss/utilities/flex";
+@import "~bootstrap/scss/utilities/screenreaders";
+@import "~bootstrap/scss/utilities/spacing";
+
+
+// JS media breakpoint (`libs/style.store.js#getCurrentMediaBreakpoint`)
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    :root {
+      --media-breakpoint: #{$breakpoint};
+    }
+  }
+}
+
+// Details - Summary
+
+summary {
+  outline: 0;
+}
+
+details[open] summary ~ * {
+  animation: sweep .15s ease-in-out;
+  transition: height .15s ease-in-out;
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    margin-top: -10px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}

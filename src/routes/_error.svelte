@@ -6,7 +6,6 @@
 </script>
 
 <style>
-  @import "~tachyons/css/tachyons.css";
 </style>
 
 <svelte:head>
