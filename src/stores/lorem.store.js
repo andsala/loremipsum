@@ -1,5 +1,6 @@
 import getlorem from 'getlorem';
-import { writable, derived } from 'svelte/store';
+import { writable } from 'svelte-persistent-store/local';
+import { derived } from 'svelte/store';
 
 function getLoremContent(size, type, startWithLorem) {
   size = Number(size);
@@ -23,10 +24,11 @@ function getLoremContent(size, type, startWithLorem) {
   }
 }
 
-export const size = writable(3);
-export const type = writable('sentence');
-export const startWithLorem = writable(true);
+export const size = writable('lorem.opts.size', 3);
+export const type = writable('lorem.opts.type', 'sentence');
+export const startWithLorem = writable('lorem.opts.startWithLorem', true);
 
 export const loremContent = derived(
     [size, type, startWithLorem],
-    ([$size, $type, $startWithLorem]) => getLoremContent($size, $type, $startWithLorem));
+    ([$size, $type, $startWithLorem]) => getLoremContent($size, $type, $startWithLorem),
+    '');

@@ -3,6 +3,9 @@ import { readable, derived } from 'svelte/store';
 const mediaBreakpoints = ['xs', 'sm', 'md', 'lg', 'xl'];
 
 function getCurrentMediaBreakpoint() {
+  if (typeof getComputedStyle !== 'function') {
+    return mediaBreakpoint[0];
+  }
   return getComputedStyle(document.documentElement)
       .getPropertyValue('--media-breakpoint')
       .trim();
