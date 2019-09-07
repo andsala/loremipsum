@@ -33,8 +33,8 @@ summary {
 }
 
 details[open] summary ~ * {
-  animation: sweep .15s ease-in-out;
-  transition: height .15s ease-in-out;
+  animation: sweep .3s ease-in-out;
+  transition: height .3s ease-in-out;
 }
 
 @keyframes sweep {
@@ -45,5 +45,16 @@ details[open] summary ~ * {
   100% {
     opacity: 1;
     margin-top: 0;
+  }
+}
+
+// faded
+
+.faded {
+  opacity: .3;
+  transition: opacity .3s ease-in-out;
+
+  &:hover {
+    opacity: 1;
   }
 }

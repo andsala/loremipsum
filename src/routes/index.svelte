@@ -18,8 +18,8 @@
 
 <div class="row flex-column flex-md-row">
   <div class="col-3 d-none d-md-block"></div>
-  <div class="col col-md-3 order-md-last mb-3">
     <details open={$mediaBreakpointIndex >= 2}>
+  <div class="col col-md-3 order-md-last mb-3 faded">
       <summary class="outline-0">Options</summary>
       <FilterForm/>
       <hr class="d-block d-md-none">
